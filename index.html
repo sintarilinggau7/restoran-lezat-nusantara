@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Restoran Lezat Nusantara</title>
+
+<style>
+body{font-family:Arial,sans-serif;margin:30px;background-color:white}
+h1{text-align:center}
+.pembuka{text-align:center}
+.video{text-align:center;margin:30px 0}
+video{width:550px;max-width:100%;border:2px solid black}
+.menu{border-top:2px solid black;padding-top:20px;margin-top:20px}
+.daftar-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:20px}
+.item{margin-bottom:10px}
+.item img{width:200px;height:140px;object-fit:cover;border:1px solid black;display:block}
+.harga{font-weight:bold}
+.informasi-menu{display:flex;gap:30px;margin-top:20px}
+.kotak{flex:1;border:1px solid #ccc;padding:20px}
+.kotak h2{margin-top:0}
+.kotak ul,.kotak ol{line-height:1.8}
+.alamat{border-top:2px solid black;margin-top:30px;padding-top:20px}
+@media(max-width:800px){
+.daftar-menu{grid-template-columns:repeat(2,1fr)}
+.informasi-menu{flex-direction:column}
+}
+@media(max-width:500px){
+.daftar-menu{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Restoran Lezat Nusantara</h1>
+
+<p class="pembuka">
+Selamat datang di Restoran Lezat Nusantara.
+Kami menyediakan berbagai makanan dan minuman
+dengan cita rasa yang lezat dan harga terjangkau.
+</p>
+
+<!-- VIDEO PROMOSI -->
+<div class="video">
+<h2>Video Promosi Restoran</h2>
+<video controls>
+<source src="promosi-restoran.mp4" type="video/mp4">
+Browser kamu tidak mendukung video.
+</video>
+</div>
+
+<!-- DAFTAR MENU -->
+<div class="menu">
+<h2>Daftar Harga Menu Restoran &copy; 2026</h2>
+
+<div class="daftar-menu">
+
+<!-- NASI GORENG -->
+<div class="item">
+<h3>Nasi Goreng Spesial</h3>
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300" alt="Nasi Goreng Spesial">
+<p>Nasi goreng spesial dengan telur dan sayuran.</p>
+<p class="harga">Harga: Rp20.000 / &#36;20</p>
+</div>
+
+<!-- AYAM BAKAR -->
+<div class="item">
+<h3>Ayam Bakar</h3>
+<img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg" alt="Ayam Bakar">
+<p>Ayam bakar dengan bumbu khas dan sambal.</p>
+<p class="harga">Harga: Rp25.000 / &#36;25</p>
+</div>
+
+<!-- MIE GORENG -->
+<div class="item">
+<h3>Mie Goreng</h3>
+<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg" alt="Mie Goreng">
+<p>Mie goreng dengan sayuran dan telur.</p>
+<p class="harga">Harga: Rp18.000 / &#36;18</p>
+</div>
+
+<!-- SOTO AYAM -->
+<div class="item">
+<h3>Soto Ayam</h3>
+<img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=300" alt="Soto Ayam">
+<p>Soto ayam hangat dengan kuah gurih.</p>
+<p class="harga">Harga: Rp20.000 / &#36;20</p>
+</div>
+
+<!-- ES TEH MANIS -->
+<div class="item">
+<h3>Es Teh Manis</h3>
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300" alt="Es Teh Manis">
+<p>Es teh manis yang segar.</p>
+<p class="harga">Harga: Rp5.000 / &#36;5</p>
+</div>
+
+</div>
+</div>
+
+<!-- KATEGORI DAN LANGKAH PEMESANAN -->
+<div class="menu">
+<div class="informasi-menu">
+
+<!-- NESTED LIST -->
+<div class="kotak">
+<h2>Kategori Menu</h2>
+<p>Restoran Lezat Nusantara memiliki beberapa kategori menu yang dapat dipilih pelanggan.</p>
+
+<ul>
+<li>Makanan
+<ul>
+<li>Nasi Goreng Spesial</li>
+<li>Ayam Bakar</li>
+<li>Mie Goreng</li>
+<li>Soto Ayam</li>
+</ul>
+</li>
+
+<li>Minuman
+<ul>
+<li>Es Teh Manis</li>
+</ul>
+</li>
+
+<!-- ORDERED LIST -->
+<div class="kotak">
+<h2>Langkah-Langkah Pemesanan</h2>
+
+<p>
+Pelanggan dapat mengikuti langkah berikut
+untuk melakukan pemesanan makanan:
+</p>
+
+<ol>
+<li>Pilih makanan atau minuman.</li>
+<li>Tentukan jumlah pesanan.</li>
+<li>Sampaikan pesanan kepada pelayan.</li>
+<li>Periksa kembali total harga.</li>
+<li>Lakukan pembayaran.</li>
+<li>Tunggu pesanan disiapkan.</li>
+<li>Pesanan siap dinikmati.</li>
+</ol>
+</div>
+
+</div>
+</div>
+
+<!-- INFORMASI ALAMAT -->
+<div class="alamat">
+<h2>Informasi &amp; Alamat Restoran</h2>
+
+<p>
+Jl. Merdeka No. 10<br>
+Jakarta, Indonesia.
+</p>
+
+<p>
+Jam Operasional: Setiap Hari
+(10.00 - 22.00 WIB)
+</p>
+
+<p>
+&copy; 2026 Restoran Lezat Nusantara
+</p>
+</div>
+
+</body>
+</html>

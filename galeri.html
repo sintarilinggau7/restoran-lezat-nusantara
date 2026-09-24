@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Galeri Restoran</title>
+
+<style>
+body{font-family:Arial,sans-serif;margin:30px;background-color:white}
+nav{text-align:center;margin-bottom:30px}
+nav a{margin:0 10px}
+h1{text-align:center}
+.konten{border-top:2px solid black;padding-top:20px}
+.galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:20px}
+.galeri img{width:100%;height:180px;object-fit:cover;border:1px solid black}
+.item{text-align:center}
+@media(max-width:800px){
+.galeri{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:500px){
+.galeri{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a> |
+<a href="profil.html">Profil</a> |
+<a href="about.html">About</a> |
+<a href="galeri.html">Gallery</a> |
+<a href="kontak.html">Kontak</a>
+</nav>
+
+<h1>Galeri Restoran</h1>
+
+<div class="konten">
+
+<p>
+Berikut adalah beberapa menu yang tersedia di
+Restoran Lezat Nusantara.
+</p>
+
+<div class="galeri">
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=500"
+alt="Nasi Goreng">
+<h3>Nasi Goreng Spesial</h3>
+</div>
+
+<div class="item">
+<img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+alt="Ayam Bakar">
+<h3>Ayam Bakar</h3>
+</div>
+
+<div class="item">
+<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
+alt="Mie Goreng">
+<h3>Mie Goreng</h3>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=500"
+alt="Soto Ayam">
+<h3>Soto Ayam</h3>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500"
+alt="Es Teh Manis">
+<h3>Es Teh Manis</h3>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
