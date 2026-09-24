@@ -20,6 +20,8 @@ video{width:550px;max-width:100%;border:2px solid black}
 .kotak h2{margin-top:0}
 .kotak ul,.kotak ol{line-height:1.8}
 .alamat{border-top:2px solid black;margin-top:30px;padding-top:20px}
+nav{text-align:center;margin-bottom:30px}
+nav a{margin:0 10px}
 @media(max-width:800px){
 .daftar-menu{grid-template-columns:repeat(2,1fr)}
 .informasi-menu{flex-direction:column}
@@ -32,6 +34,14 @@ video{width:550px;max-width:100%;border:2px solid black}
 
 <body>
 
+<nav>
+<a href="index.html">Home</a> |
+<a href="profil.html">Profil</a> |
+<a href="about.html">About</a> |
+<a href="galeri.html">Gallery</a> |
+<a href="kontak.html">Kontak</a>
+</nav>
+
 <h1>Restoran Lezat Nusantara</h1>
 
 <p class="pembuka">
@@ -40,7 +50,6 @@ Kami menyediakan berbagai makanan dan minuman
 dengan cita rasa yang lezat dan harga terjangkau.
 </p>
 
-<!-- VIDEO PROMOSI -->
 <div class="video">
 <h2>Video Promosi Restoran</h2>
 <video controls>
@@ -49,13 +58,11 @@ Browser kamu tidak mendukung video.
 </video>
 </div>
 
-<!-- DAFTAR MENU -->
 <div class="menu">
 <h2>Daftar Harga Menu Restoran &copy; 2026</h2>
 
 <div class="daftar-menu">
 
-<!-- NASI GORENG -->
 <div class="item">
 <h3>Nasi Goreng Spesial</h3>
 <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300" alt="Nasi Goreng Spesial">
@@ -63,7 +70,6 @@ Browser kamu tidak mendukung video.
 <p class="harga">Harga: Rp20.000 / &#36;20</p>
 </div>
 
-<!-- AYAM BAKAR -->
 <div class="item">
 <h3>Ayam Bakar</h3>
 <img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg" alt="Ayam Bakar">
@@ -71,7 +77,6 @@ Browser kamu tidak mendukung video.
 <p class="harga">Harga: Rp25.000 / &#36;25</p>
 </div>
 
-<!-- MIE GORENG -->
 <div class="item">
 <h3>Mie Goreng</h3>
 <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg" alt="Mie Goreng">
@@ -79,7 +84,6 @@ Browser kamu tidak mendukung video.
 <p class="harga">Harga: Rp18.000 / &#36;18</p>
 </div>
 
-<!-- SOTO AYAM -->
 <div class="item">
 <h3>Soto Ayam</h3>
 <img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=300" alt="Soto Ayam">
@@ -87,7 +91,6 @@ Browser kamu tidak mendukung video.
 <p class="harga">Harga: Rp20.000 / &#36;20</p>
 </div>
 
-<!-- ES TEH MANIS -->
 <div class="item">
 <h3>Es Teh Manis</h3>
 <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300" alt="Es Teh Manis">
@@ -98,14 +101,16 @@ Browser kamu tidak mendukung video.
 </div>
 </div>
 
-<!-- KATEGORI DAN LANGKAH PEMESANAN -->
 <div class="menu">
 <div class="informasi-menu">
 
-<!-- NESTED LIST -->
 <div class="kotak">
 <h2>Kategori Menu</h2>
-<p>Restoran Lezat Nusantara memiliki beberapa kategori menu yang dapat dipilih pelanggan.</p>
+
+<p>
+Restoran Lezat Nusantara memiliki beberapa kategori menu
+yang dapat dipilih pelanggan.
+</p>
 
 <ul>
 <li>Makanan
@@ -123,7 +128,15 @@ Browser kamu tidak mendukung video.
 </ul>
 </li>
 
-<!-- ORDERED LIST -->
+<li>Dessert
+<ul>
+<li>Puding</li>
+<li>Es Krim</li>
+</ul>
+</li>
+</ul>
+</div>
+
 <div class="kotak">
 <h2>Langkah-Langkah Pemesanan</h2>
 
@@ -146,7 +159,6 @@ untuk melakukan pemesanan makanan:
 </div>
 </div>
 
-<!-- INFORMASI ALAMAT -->
 <div class="alamat">
 <h2>Informasi &amp; Alamat Restoran</h2>
 
