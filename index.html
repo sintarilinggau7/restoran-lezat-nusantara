@@ -5,42 +5,161 @@
 <title>Restoran Lezat Nusantara</title>
 
 <style>
-body{font-family:Arial,sans-serif;margin:30px;background-color:white}
-h1{text-align:center}
-.pembuka{text-align:center}
-.video{text-align:center;margin:30px 0}
-video{width:550px;max-width:100%;border:2px solid black}
-.menu{border-top:2px solid black;padding-top:20px;margin-top:20px}
-.daftar-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:20px}
-.item{margin-bottom:10px}
-.item img{width:200px;height:140px;object-fit:cover;border:1px solid black;display:block}
-.harga{font-weight:bold}
-.informasi-menu{display:flex;gap:30px;margin-top:20px}
-.kotak{flex:1;border:1px solid #ccc;padding:20px}
-.kotak h2{margin-top:0}
-.kotak ul,.kotak ol{line-height:1.8}
-.alamat{border-top:2px solid black;margin-top:30px;padding-top:20px}
-nav{text-align:center;margin-bottom:30px}
-nav a{margin:0 10px}
-@media(max-width:800px){
-.daftar-menu{grid-template-columns:repeat(2,1fr)}
-.informasi-menu{flex-direction:column}
+body{
+    font-family:Arial,sans-serif;
+    margin:30px;
+    background:white;
 }
+
+nav{
+    text-align:center;
+    margin-bottom:30px;
+    padding:15px;
+    border-bottom:2px solid black;
+}
+
+nav a{
+    margin:0 10px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+h1{
+    text-align:center;
+}
+
+h2{
+    margin-top:25px;
+}
+
+.pembuka{
+    text-align:center;
+    line-height:1.7;
+}
+
+.video{
+    text-align:center;
+    margin:30px 0;
+}
+
+video{
+    width:550px;
+    max-width:100%;
+    border:2px solid black;
+}
+
+.bagian{
+    border-top:2px solid black;
+    padding-top:20px;
+    margin-top:30px;
+}
+
+.gambar-tengah{
+    text-align:center;
+    margin:20px 0;
+}
+
+.gambar-tengah img{
+    width:500px;
+    max-width:100%;
+    height:280px;
+    object-fit:cover;
+    border:1px solid black;
+}
+
+.daftar-menu{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:20px;
+}
+
+.item{
+    margin-bottom:10px;
+}
+
+.item img{
+    width:200px;
+    height:140px;
+    object-fit:cover;
+    border:1px solid black;
+    display:block;
+}
+
+.harga{
+    font-weight:bold;
+}
+
+.informasi-menu{
+    display:flex;
+    gap:30px;
+    margin-top:20px;
+}
+
+.kotak{
+    flex:1;
+    border:1px solid #ccc;
+    padding:20px;
+}
+
+.kotak h2{
+    margin-top:0;
+}
+
+.kotak ul,
+.kotak ol{
+    line-height:1.8;
+}
+
+.info{
+    border:1px solid #ccc;
+    padding:20px;
+    margin-top:20px;
+}
+
+.whatsapp{
+    font-weight:bold;
+}
+
+.alamat{
+    border-top:2px solid black;
+    margin-top:30px;
+    padding-top:20px;
+}
+
+@media(max-width:800px){
+    .daftar-menu{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .informasi-menu{
+        flex-direction:column;
+    }
+}
+
 @media(max-width:500px){
-.daftar-menu{grid-template-columns:1fr}
+    .daftar-menu{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGASI -->
 <nav>
-<a href="index.html">Home</a> |
-<a href="profil.html">Profil</a> |
-<a href="about.html">About</a> |
-<a href="galeri.html">Gallery</a> |
-<a href="kontak.html">Kontak</a>
+    <a href="#home">Home</a> |
+    <a href="#profil">Profil</a> |
+    <a href="#about">About</a> |
+    <a href="#galeri">Gallery</a> |
+    <a href="#kontak">Kontak</a>
 </nav>
+
+
+<!-- HOME -->
+<div id="home">
 
 <h1>Restoran Lezat Nusantara</h1>
 
@@ -52,48 +171,127 @@ dengan cita rasa yang lezat dan harga terjangkau.
 
 <div class="video">
 <h2>Video Promosi Restoran</h2>
+
 <video controls>
-<source src="promosi-restoran.mp4" type="video/mp4">
-Browser kamu tidak mendukung video.
+    <source src="promosi-restoran.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video.
 </video>
+
 </div>
 
-<div class="menu">
+</div>
+
+
+<!-- PROFIL -->
+<div id="profil" class="bagian">
+
+<h2>Profil Restoran</h2>
+
+<div class="gambar-tengah">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600"
+alt="Profil Restoran">
+
+</div>
+
+<p>
+Restoran Lezat Nusantara merupakan restoran yang menyediakan
+berbagai makanan dan minuman dengan cita rasa khas Indonesia.
+Restoran ini hadir untuk memberikan pilihan makanan yang lezat,
+berkualitas, dan terjangkau bagi masyarakat.
+</p>
+
+<p>
+Kami mengutamakan kualitas makanan, kebersihan, serta pelayanan
+yang baik agar pelanggan merasa nyaman ketika berkunjung.
+</p>
+
+</div>
+
+
+<!-- ABOUT -->
+<div id="about" class="bagian">
+
+<h2>About Restoran</h2>
+
+<div class="gambar-tengah">
+
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600"
+alt="Restoran">
+
+</div>
+
+<p>
+Restoran Lezat Nusantara memiliki konsep restoran yang
+mengutamakan makanan khas Nusantara dengan suasana yang
+nyaman dan pelayanan yang ramah.
+</p>
+
+<p>
+Kami menyediakan berbagai pilihan makanan, minuman, dan dessert
+yang dapat dinikmati oleh pelanggan bersama keluarga maupun teman.
+</p>
+
+</div>
+
+
+<!-- DAFTAR MENU -->
+<div class="bagian">
+
 <h2>Daftar Harga Menu Restoran &copy; 2026</h2>
 
 <div class="daftar-menu">
 
 <div class="item">
 <h3>Nasi Goreng Spesial</h3>
-<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300" alt="Nasi Goreng Spesial">
+
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
+alt="Nasi Goreng Spesial">
+
 <p>Nasi goreng spesial dengan telur dan sayuran.</p>
 <p class="harga">Harga: Rp20.000 / &#36;20</p>
 </div>
 
+
 <div class="item">
 <h3>Ayam Bakar</h3>
-<img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg" alt="Ayam Bakar">
+
+<img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+alt="Ayam Bakar">
+
 <p>Ayam bakar dengan bumbu khas dan sambal.</p>
 <p class="harga">Harga: Rp25.000 / &#36;25</p>
 </div>
 
+
 <div class="item">
 <h3>Mie Goreng</h3>
-<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg" alt="Mie Goreng">
+
+<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
+alt="Mie Goreng">
+
 <p>Mie goreng dengan sayuran dan telur.</p>
 <p class="harga">Harga: Rp18.000 / &#36;18</p>
 </div>
 
+
 <div class="item">
 <h3>Soto Ayam</h3>
-<img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=300" alt="Soto Ayam">
+
+<img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=300"
+alt="Soto Ayam">
+
 <p>Soto ayam hangat dengan kuah gurih.</p>
 <p class="harga">Harga: Rp20.000 / &#36;20</p>
 </div>
 
+
 <div class="item">
 <h3>Es Teh Manis</h3>
-<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300" alt="Es Teh Manis">
+
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300"
+alt="Es Teh Manis">
+
 <p>Es teh manis yang segar.</p>
 <p class="harga">Harga: Rp5.000 / &#36;5</p>
 </div>
@@ -101,18 +299,23 @@ Browser kamu tidak mendukung video.
 </div>
 </div>
 
-<div class="menu">
+
+<!-- KATEGORI DAN PEMESANAN -->
+<div class="bagian">
+
 <div class="informasi-menu">
 
 <div class="kotak">
+
 <h2>Kategori Menu</h2>
 
 <p>
-Restoran Lezat Nusantara memiliki beberapa kategori menu
-yang dapat dipilih pelanggan.
+Restoran Lezat Nusantara memiliki beberapa kategori
+menu yang dapat dipilih pelanggan.
 </p>
 
 <ul>
+
 <li>Makanan
 <ul>
 <li>Nasi Goreng Spesial</li>
@@ -134,10 +337,14 @@ yang dapat dipilih pelanggan.
 <li>Es Krim</li>
 </ul>
 </li>
+
 </ul>
+
 </div>
 
+
 <div class="kotak">
+
 <h2>Langkah-Langkah Pemesanan</h2>
 
 <p>
@@ -146,20 +353,126 @@ untuk melakukan pemesanan makanan:
 </p>
 
 <ol>
-<li>Pilih makanan atau minuman.</li>
-<li>Tentukan jumlah pesanan.</li>
+<li>Pilih makanan atau minuman yang diinginkan.</li>
+<li>Tentukan jumlah makanan atau minuman.</li>
 <li>Sampaikan pesanan kepada pelayan.</li>
-<li>Periksa kembali total harga.</li>
-<li>Lakukan pembayaran.</li>
-<li>Tunggu pesanan disiapkan.</li>
+<li>Pelayan mencatat pesanan pelanggan.</li>
+<li>Periksa kembali pesanan yang telah dipilih.</li>
+<li>Periksa total harga pesanan.</li>
+<li>Lakukan pembayaran sesuai total harga.</li>
+<li>Tunggu pesanan disiapkan oleh restoran.</li>
+<li>Pelayan memberikan pesanan kepada pelanggan.</li>
 <li>Pesanan siap dinikmati.</li>
 </ol>
+
 </div>
 
 </div>
 </div>
 
+
+<!-- GALERI -->
+<div id="galeri" class="bagian">
+
+<h2>Gallery</h2>
+
+<p>
+Berikut beberapa pilihan menu yang tersedia
+di Restoran Lezat Nusantara.
+</p>
+
+<div class="daftar-menu">
+
+<div class="item">
+<h3>Nasi Goreng</h3>
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
+alt="Nasi Goreng">
+</div>
+
+<div class="item">
+<h3>Ayam Bakar</h3>
+<img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+alt="Ayam Bakar">
+</div>
+
+<div class="item">
+<h3>Mie Goreng</h3>
+<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
+alt="Mie Goreng">
+</div>
+
+<div class="item">
+<h3>Soto Ayam</h3>
+<img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=300"
+alt="Soto Ayam">
+</div>
+
+<div class="item">
+<h3>Es Teh Manis</h3>
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300"
+alt="Es Teh Manis">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- KONTAK -->
+<div id="kontak" class="bagian">
+
+<h2>Kontak Restoran</h2>
+
+<p>
+Jika ingin mendapatkan informasi lebih lanjut,
+silakan hubungi Restoran Lezat Nusantara.
+</p>
+
+<div class="info">
+
+<h2>Informasi Kontak</h2>
+
+<p>
+<strong>Alamat:</strong><br>
+Jl. Merdeka No. 10<br>
+Jakarta, Indonesia.
+</p>
+
+<p>
+<strong>Jam Operasional:</strong><br>
+Setiap Hari, 10.00 - 22.00 WIB.
+</p>
+
+<p class="whatsapp">
+<strong>WhatsApp:</strong><br>
+
+<a href="https://wa.me/6281234567890" target="_blank">
+0812-3456-7890
+</a>
+
+</p>
+
+<p>
+<strong>Email:</strong><br>
+restoranlezatnusantara@gmail.com
+</p>
+
+</div>
+
+<h2>Pesan</h2>
+
+<p>
+Kami siap melayani pertanyaan dan kebutuhan informasi
+dari pelanggan. Silakan menghubungi kami melalui
+WhatsApp atau email yang tersedia.
+</p>
+
+</div>
+
+
+<!-- ALAMAT -->
 <div class="alamat">
+
 <h2>Informasi &amp; Alamat Restoran</h2>
 
 <p>
@@ -175,6 +488,7 @@ Jam Operasional: Setiap Hari
 <p>
 &copy; 2026 Restoran Lezat Nusantara
 </p>
+
 </div>
 
 </body>
