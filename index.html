@@ -29,18 +29,43 @@ h1{
     text-align:center;
 }
 
-h2{
-    margin-top:25px;
-}
-
 .pembuka{
     text-align:center;
     line-height:1.7;
 }
 
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid black;
+    padding:12px;
+    vertical-align:top;
+}
+
+th{
+    text-align:center;
+}
+
+.gambar{
+    width:180px;
+    height:130px;
+    object-fit:cover;
+}
+
+.gambar-kecil{
+    width:100px;
+    height:80px;
+    object-fit:cover;
+    margin:3px;
+}
+
 .video{
     text-align:center;
-    margin:30px 0;
+    margin:20px 0;
 }
 
 video{
@@ -55,93 +80,23 @@ video{
     margin-top:30px;
 }
 
-.gambar-tengah{
+.promosi{
     text-align:center;
-    margin:20px 0;
-}
-
-.gambar-tengah img{
-    width:500px;
-    max-width:100%;
-    height:280px;
-    object-fit:cover;
-    border:1px solid black;
-}
-
-.daftar-menu{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:20px;
-}
-
-.item{
-    margin-bottom:10px;
-}
-
-.item img{
-    width:200px;
-    height:140px;
-    object-fit:cover;
-    border:1px solid black;
-    display:block;
+    background:#f5f5f5;
 }
 
 .harga{
     font-weight:bold;
 }
 
-.informasi-menu{
-    display:flex;
-    gap:30px;
-    margin-top:20px;
+.tengah{
+    text-align:center;
 }
 
-.kotak{
-    flex:1;
-    border:1px solid #ccc;
-    padding:20px;
-}
-
-.kotak h2{
-    margin-top:0;
-}
-
-.kotak ul,
-.kotak ol{
-    line-height:1.8;
-}
-
-.info{
-    border:1px solid #ccc;
-    padding:20px;
-    margin-top:20px;
-}
-
-.whatsapp{
-    font-weight:bold;
-}
-
-.alamat{
+footer{
     border-top:2px solid black;
     margin-top:30px;
     padding-top:20px;
-}
-
-@media(max-width:800px){
-    .daftar-menu{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .informasi-menu{
-        flex-direction:column;
-    }
-}
-
-@media(max-width:500px){
-    .daftar-menu{
-        grid-template-columns:1fr;
-    }
 }
 </style>
 </head>
@@ -150,11 +105,12 @@ video{
 
 <!-- NAVIGASI -->
 <nav>
-    <a href="#home">Home</a> |
-    <a href="#profil">Profil</a> |
-    <a href="#about">About</a> |
-    <a href="#galeri">Gallery</a> |
-    <a href="#kontak">Kontak</a>
+<a href="#home">Home</a> |
+<a href="#profil">Profil</a> |
+<a href="#about">About</a> |
+<a href="#menu">Menu</a> |
+<a href="#galeri">Gallery</a> |
+<a href="#kontak">Kontak</a>
 </nav>
 
 
@@ -169,12 +125,162 @@ Kami menyediakan berbagai makanan dan minuman
 dengan cita rasa yang lezat dan harga terjangkau.
 </p>
 
+
+<!-- PROMOSI -->
+<h2>Promosi Restoran</h2>
+
+<table class="promosi">
+
+<tr>
+<th colspan="3">
+PROMO SPESIAL RESTORAN LEZAT NUSANTARA
+</th>
+</tr>
+
+
+<!-- PROMO 1 -->
+<tr>
+
+<td class="tengah">
+
+<div>
+
+<img class="gambar-kecil"
+src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
+alt="Nasi Goreng">
+
+<img class="gambar-kecil"
+src="https://www.bakmigm.com/cfind/source/thumb/images/menu/cover_w480_h480_es-teh-manis.jpg"
+alt="Es Teh Manis">
+
+</div>
+
+<h3>Promo 1</h3>
+
+<p>
+<strong>Nasi Goreng Spesial + Es Teh Manis</strong>
+</p>
+
+<p>
+Harga Normal:
+<del>Rp25.000</del>
+<br>
+<strong>Harga Promo: Rp22.000</strong>
+</p>
+
+<p>
+Hemat Rp3.000
+</p>
+
+</td>
+
+
+<!-- PROMO 2 -->
+<td class="tengah">
+
+<div>
+
+<img class="gambar-kecil"
+src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+alt="Ayam Bakar">
+
+<img class="gambar-kecil"
+src="https://www.bakmigm.com/cfind/source/thumb/images/menu/cover_w480_h480_es-teh-manis.jpg"
+alt="Es Teh Manis">
+
+</div>
+
+<h3>Promo 2</h3>
+
+<p>
+<strong>Ayam Bakar + Es Teh Manis</strong>
+</p>
+
+<p>
+Harga Normal:
+<del>Rp30.000</del>
+<br>
+<strong>Harga Promo: Rp27.000</strong>
+</p>
+
+<p>
+Hemat Rp3.000
+</p>
+
+</td>
+
+
+<!-- PROMO 3 -->
+<td class="tengah">
+
+<div>
+
+<img class="gambar-kecil"
+src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
+alt="Nasi Goreng">
+
+<img class="gambar-kecil"
+src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+alt="Ayam Bakar">
+
+<img class="gambar-kecil"
+src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
+alt="Mie Goreng">
+
+</div>
+
+<h3>Promo 3</h3>
+
+<p>
+<strong>Paket Keluarga</strong>
+</p>
+
+<p>
+Nasi Goreng + Ayam Bakar + Mie Goreng
+</p>
+
+<p>
+Harga Normal:
+<del>Rp63.000</del>
+<br>
+<strong>Harga Promo: Rp55.000</strong>
+</p>
+
+<p>
+Hemat Rp8.000
+</p>
+
+</td>
+
+</tr>
+
+
+<!-- KETERANGAN PROMO -->
+<tr>
+
+<td colspan="3" class="tengah">
+
+<strong>PROMO BERLAKU SETIAP HARI</strong>
+
+<br>
+
+Pukul 10.00 - 22.00 WIB
+
+</td>
+
+</tr>
+
+</table>
+
+
+<!-- VIDEO -->
 <div class="video">
+
 <h2>Video Promosi Restoran</h2>
 
 <video controls>
-    <source src="promosi-restoran.mp4" type="video/mp4">
-    Browser kamu tidak mendukung video.
+<source src="promosi-restoran.mp4" type="video/mp4">
+Browser kamu tidak mendukung video.
 </video>
 
 </div>
@@ -187,24 +293,35 @@ dengan cita rasa yang lezat dan harga terjangkau.
 
 <h2>Profil Restoran</h2>
 
-<div class="gambar-tengah">
+<table>
 
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600"
+<tr>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600"
 alt="Profil Restoran">
 
-</div>
+</td>
+
+<td>
 
 <p>
 Restoran Lezat Nusantara merupakan restoran yang menyediakan
 berbagai makanan dan minuman dengan cita rasa khas Indonesia.
+</p>
+
+<p>
 Restoran ini hadir untuk memberikan pilihan makanan yang lezat,
 berkualitas, dan terjangkau bagi masyarakat.
 </p>
 
-<p>
-Kami mengutamakan kualitas makanan, kebersihan, serta pelayanan
-yang baik agar pelanggan merasa nyaman ketika berkunjung.
-</p>
+</td>
+
+</tr>
+
+</table>
 
 </div>
 
@@ -214,12 +331,11 @@ yang baik agar pelanggan merasa nyaman ketika berkunjung.
 
 <h2>About Restoran</h2>
 
-<div class="gambar-tengah">
+<table>
 
-<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600"
-alt="Restoran">
+<tr>
 
-</div>
+<td>
 
 <p>
 Restoran Lezat Nusantara memiliki konsep restoran yang
@@ -228,95 +344,196 @@ nyaman dan pelayanan yang ramah.
 </p>
 
 <p>
-Kami menyediakan berbagai pilihan makanan, minuman, dan dessert
-yang dapat dinikmati oleh pelanggan bersama keluarga maupun teman.
+Kami menyediakan berbagai pilihan makanan, minuman,
+dan dessert yang dapat dinikmati bersama keluarga maupun teman.
 </p>
+
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600"
+alt="Restoran">
+
+</td>
+
+</tr>
+
+</table>
 
 </div>
 
 
-<!-- DAFTAR MENU -->
-<div class="bagian">
+<!-- MENU -->
+<div id="menu" class="bagian">
 
 <h2>Daftar Harga Menu Restoran &copy; 2026</h2>
 
-<div class="daftar-menu">
+<table>
 
-<div class="item">
-<h3>Nasi Goreng Spesial</h3>
+<tr>
+<th>Menu</th>
+<th>Gambar</th>
+<th>Deskripsi</th>
+<th>Harga</th>
+</tr>
 
-<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
+
+<!-- NASI GORENG -->
+<tr>
+
+<td>
+Nasi Goreng Spesial
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
 alt="Nasi Goreng Spesial">
 
-<p>Nasi goreng spesial dengan telur dan sayuran.</p>
-<p class="harga">Harga: Rp20.000 / &#36;20</p>
-</div>
+</td>
+
+<td>
+Nasi goreng spesial dengan telur dan sayuran.
+</td>
+
+<td class="harga">
+Rp20.000
+</td>
+
+</tr>
 
 
-<div class="item">
-<h3>Ayam Bakar</h3>
+<!-- AYAM BAKAR -->
+<tr>
 
-<img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+<td>
+Ayam Bakar
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
 alt="Ayam Bakar">
 
-<p>Ayam bakar dengan bumbu khas dan sambal.</p>
-<p class="harga">Harga: Rp25.000 / &#36;25</p>
-</div>
+</td>
+
+<td>
+Ayam bakar dengan bumbu khas dan sambal.
+</td>
+
+<td class="harga">
+Rp25.000
+</td>
+
+</tr>
 
 
-<div class="item">
-<h3>Mie Goreng</h3>
+<!-- MIE GORENG -->
+<tr>
 
-<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
+<td>
+Mie Goreng
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
 alt="Mie Goreng">
 
-<p>Mie goreng dengan sayuran dan telur.</p>
-<p class="harga">Harga: Rp18.000 / &#36;18</p>
-</div>
+</td>
+
+<td>
+Mie goreng dengan sayuran dan telur.
+</td>
+
+<td class="harga">
+Rp18.000
+</td>
+
+</tr>
 
 
-<div class="item">
-<h3>Soto Ayam</h3>
+<!-- SOTO AYAM -->
+<tr>
 
-<img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=300"
+<td>
+Soto Ayam
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://img-highend.okezone.com/library/images/foto%202%283%29.jpeg"
 alt="Soto Ayam">
 
-<p>Soto ayam hangat dengan kuah gurih.</p>
-<p class="harga">Harga: Rp20.000 / &#36;20</p>
-</div>
+</td>
+
+<td>
+Soto ayam hangat dengan kuah gurih.
+</td>
+
+<td class="harga">
+Rp20.000
+</td>
+
+</tr>
 
 
-<div class="item">
-<h3>Es Teh Manis</h3>
+<!-- ES TEH MANIS -->
+<tr>
 
-<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300"
+<td>
+Es Teh Manis
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://www.bakmigm.com/cfind/source/thumb/images/menu/cover_w480_h480_es-teh-manis.jpg"
 alt="Es Teh Manis">
 
-<p>Es teh manis yang segar.</p>
-<p class="harga">Harga: Rp5.000 / &#36;5</p>
-</div>
+</td>
 
-</div>
+<td>
+Es teh manis yang segar.
+</td>
+
+<td class="harga">
+Rp5.000
+</td>
+
+</tr>
+
+</table>
+
 </div>
 
 
 <!-- KATEGORI DAN PEMESANAN -->
 <div class="bagian">
 
-<div class="informasi-menu">
+<h2>Kategori Menu dan Langkah Pemesanan</h2>
 
-<div class="kotak">
+<table>
 
-<h2>Kategori Menu</h2>
+<tr>
+<th>Kategori Menu</th>
+<th>Langkah-Langkah Pemesanan</th>
+</tr>
 
-<p>
-Restoran Lezat Nusantara memiliki beberapa kategori
-menu yang dapat dipilih pelanggan.
-</p>
+<tr>
+
+<td>
 
 <ul>
 
-<li>Makanan
+<li>
+Makanan
 <ul>
 <li>Nasi Goreng Spesial</li>
 <li>Ayam Bakar</li>
@@ -325,13 +542,15 @@ menu yang dapat dipilih pelanggan.
 </ul>
 </li>
 
-<li>Minuman
+<li>
+Minuman
 <ul>
 <li>Es Teh Manis</li>
 </ul>
 </li>
 
-<li>Dessert
+<li>
+Dessert
 <ul>
 <li>Puding</li>
 <li>Es Krim</li>
@@ -340,34 +559,32 @@ menu yang dapat dipilih pelanggan.
 
 </ul>
 
-</div>
+</td>
 
 
-<div class="kotak">
-
-<h2>Langkah-Langkah Pemesanan</h2>
-
-<p>
-Pelanggan dapat mengikuti langkah berikut
-untuk melakukan pemesanan makanan:
-</p>
+<td>
 
 <ol>
-<li>Pilih makanan atau minuman yang diinginkan.</li>
-<li>Tentukan jumlah makanan atau minuman.</li>
+
+<li>Pilih makanan atau minuman.</li>
+<li>Tentukan jumlah pesanan.</li>
 <li>Sampaikan pesanan kepada pelayan.</li>
-<li>Pelayan mencatat pesanan pelanggan.</li>
-<li>Periksa kembali pesanan yang telah dipilih.</li>
-<li>Periksa total harga pesanan.</li>
-<li>Lakukan pembayaran sesuai total harga.</li>
-<li>Tunggu pesanan disiapkan oleh restoran.</li>
-<li>Pelayan memberikan pesanan kepada pelanggan.</li>
+<li>Pelayan mencatat pesanan.</li>
+<li>Periksa kembali pesanan.</li>
+<li>Periksa total harga.</li>
+<li>Lakukan pembayaran.</li>
+<li>Tunggu pesanan disiapkan.</li>
+<li>Pelayan memberikan pesanan.</li>
 <li>Pesanan siap dinikmati.</li>
+
 </ol>
 
-</div>
+</td>
 
-</div>
+</tr>
+
+</table>
+
 </div>
 
 
@@ -376,44 +593,86 @@ untuk melakukan pemesanan makanan:
 
 <h2>Gallery</h2>
 
-<p>
-Berikut beberapa pilihan menu yang tersedia
-di Restoran Lezat Nusantara.
-</p>
+<table>
 
-<div class="daftar-menu">
+<tr>
+<th>Nasi Goreng</th>
+<th>Ayam Bakar</th>
+<th>Mie Goreng</th>
+</tr>
 
-<div class="item">
-<h3>Nasi Goreng</h3>
-<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
+<tr>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
 alt="Nasi Goreng">
-</div>
 
-<div class="item">
-<h3>Ayam Bakar</h3>
-<img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
 alt="Ayam Bakar">
-</div>
 
-<div class="item">
-<h3>Mie Goreng</h3>
-<img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
 alt="Mie Goreng">
-</div>
 
-<div class="item">
-<h3>Soto Ayam</h3>
-<img src="https://images.unsplash.com/photo-1687419950105-b1cdeb6c66bc?w=300"
+</td>
+
+</tr>
+
+
+<tr>
+<th>Soto Ayam</th>
+<th>Es Teh Manis</th>
+<th>Paket Keluarga</th>
+</tr>
+
+<tr>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://img-highend.okezone.com/library/images/foto%202%283%29.jpeg"
 alt="Soto Ayam">
-</div>
 
-<div class="item">
-<h3>Es Teh Manis</h3>
-<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300"
+</td>
+
+<td class="tengah">
+
+<img class="gambar"
+src="https://www.bakmigm.com/cfind/source/thumb/images/menu/cover_w480_h480_es-teh-manis.jpg"
 alt="Es Teh Manis">
-</div>
 
-</div>
+</td>
+
+<td class="tengah">
+
+<img class="gambar-kecil"
+src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300"
+alt="Nasi Goreng">
+
+<img class="gambar-kecil"
+src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+alt="Ayam Bakar">
+
+<img class="gambar-kecil"
+src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/mi_goreng_noodles.jpg"
+alt="Mie Goreng">
+
+</td>
+
+</tr>
+
+</table>
 
 </div>
 
@@ -423,57 +682,75 @@ alt="Es Teh Manis">
 
 <h2>Kontak Restoran</h2>
 
-<p>
-Jika ingin mendapatkan informasi lebih lanjut,
-silakan hubungi Restoran Lezat Nusantara.
-</p>
+<table>
 
-<div class="info">
+<tr>
+<th>Informasi</th>
+<th>Detail</th>
+</tr>
 
-<h2>Informasi Kontak</h2>
+<tr>
 
-<p>
-<strong>Alamat:</strong><br>
+<td>
+Alamat
+</td>
+
+<td>
 Jl. Merdeka No. 10<br>
 Jakarta, Indonesia.
-</p>
+</td>
 
-<p>
-<strong>Jam Operasional:</strong><br>
-Setiap Hari, 10.00 - 22.00 WIB.
-</p>
+</tr>
 
-<p class="whatsapp">
-<strong>WhatsApp:</strong><br>
+<tr>
+
+<td>
+Jam Operasional
+</td>
+
+<td>
+Setiap Hari, 10.00 - 22.00 WIB
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+WhatsApp
+</td>
+
+<td>
 
 <a href="https://wa.me/6281234567890" target="_blank">
 0812-3456-7890
 </a>
 
-</p>
+</td>
 
-<p>
-<strong>Email:</strong><br>
+</tr>
+
+<tr>
+
+<td>
+Email
+</td>
+
+<td>
 restoranlezatnusantara@gmail.com
-</p>
+</td>
 
-</div>
+</tr>
 
-<h2>Pesan</h2>
-
-<p>
-Kami siap melayani pertanyaan dan kebutuhan informasi
-dari pelanggan. Silakan menghubungi kami melalui
-WhatsApp atau email yang tersedia.
-</p>
+</table>
 
 </div>
 
 
-<!-- ALAMAT -->
-<div class="alamat">
+<!-- FOOTER -->
+<footer>
 
-<h2>Informasi &amp; Alamat Restoran</h2>
+<h2>Informasi & Alamat Restoran</h2>
 
 <p>
 Jl. Merdeka No. 10<br>
@@ -489,7 +766,7 @@ Jam Operasional: Setiap Hari
 &copy; 2026 Restoran Lezat Nusantara
 </p>
 
-</div>
+</footer>
 
 </body>
 </html>
