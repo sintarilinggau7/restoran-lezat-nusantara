@@ -8,52 +8,76 @@
 body{
     font-family:Arial,sans-serif;
     margin:30px;
-    background:white;
+    background:#f5f8fc;
+    color:#333;
 }
 
 nav{
     text-align:center;
     margin-bottom:30px;
     padding:15px;
-    border-bottom:2px solid black;
+    background:#1f3a5f;
+    border-radius:8px;
+    border-bottom:3px solid #162c48;
 }
 
 nav a{
     margin:0 10px;
     text-decoration:none;
-    color:black;
+    color:white;
     font-weight:bold;
+}
+
+nav a:hover{
+    color:#c9dff5;
 }
 
 h1{
     text-align:center;
+    color:#1f3a5f;
+}
+
+h2{
+    color:#1f3a5f;
+}
+
+h3{
+    color:#1f3a5f;
 }
 
 .pembuka{
     text-align:center;
     line-height:1.7;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    border:1px solid #d8e1eb;
 }
 
 table{
     width:100%;
     border-collapse:collapse;
     margin:20px 0;
+    background:white;
 }
 
 th,td{
-    border:1px solid black;
+    border:1px solid #d8e1eb;
     padding:12px;
     vertical-align:top;
 }
 
 th{
     text-align:center;
+    background:#e8eef6;
+    color:#1f3a5f;
 }
 
 .gambar{
     width:180px;
     height:130px;
     object-fit:cover;
+    border-radius:6px;
 }
 
 .gambar-kecil{
@@ -61,42 +85,118 @@ th{
     height:80px;
     object-fit:cover;
     margin:3px;
+    border-radius:6px;
 }
 
 .video{
     text-align:center;
     margin:20px 0;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    border:1px solid #d8e1eb;
 }
 
 video{
     width:550px;
     max-width:100%;
-    border:2px solid black;
+    border:2px solid #1f3a5f;
+    border-radius:6px;
 }
 
 .bagian{
-    border-top:2px solid black;
+    border-top:3px solid #1f3a5f;
     padding-top:20px;
     margin-top:30px;
 }
 
 .promosi{
     text-align:center;
-    background:#f5f5f5;
+    background:white;
+}
+
+.promosi th{
+    background:#1f3a5f;
+    color:white;
 }
 
 .harga{
     font-weight:bold;
+    color:#1f3a5f;
 }
 
 .tengah{
     text-align:center;
 }
 
+a{
+    color:#1f3a5f;
+}
+
+a:hover{
+    color:#162c48;
+}
+
+ul li,
+ol li{
+    margin-bottom:8px;
+}
+
 footer{
-    border-top:2px solid black;
+    background:#1f3a5f;
+    color:white;
+    border-top:3px solid #162c48;
     margin-top:30px;
-    padding-top:20px;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+}
+
+footer h2{
+    color:white;
+}
+
+/* HEADER RESTORAN */
+.header-resto{
+    position:relative;
+    width:100%;
+    height:280px;
+    overflow:hidden;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.header-resto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.judul-resto{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:rgba(31,58,95,0.45);
+}
+
+.judul-resto h1{
+    color:white;
+    font-size:38px;
+    margin:0 0 10px;
+}
+
+.judul-resto p{
+    color:white;
+    font-size:18px;
+    margin:0;
 }
 </style>
 </head>
@@ -118,7 +218,17 @@ footer{
 <!-- HOME -->
 <div id="home">
 
-<h1>Restoran Lezat Nusantara</h1>
+<div class="header-resto">
+
+    <img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0da27f22-f60b-4ad9-98d1-e89925fef98f_restaurant-image_1635153941617.jpg"
+    alt="Ayam Bakar">
+
+    <div class="judul-resto">
+        <h1>Restoran Lezat Nusantara</h1>
+        <p>Nikmati makanan lezat dengan pelayanan terbaik</p>
+    </div>
+
+</div>
 
 <p class="pembuka">
 Selamat datang di Restoran Lezat Nusantara.
@@ -164,13 +274,13 @@ alt="Es Teh Manis">
 
 <p>
 Harga Normal:
-<del>Rp25.000</del>
+<del>Rp25.000 ($25)</del>
 <br>
-<strong>Harga Promo: Rp22.000</strong>
+<strong>Harga Promo: Rp22.000 ($22)</strong>
 </p>
 
 <p>
-Hemat Rp3.000
+Hemat Rp3.000 ($3)
 </p>
 
 </td>
@@ -199,13 +309,13 @@ alt="Es Teh Manis">
 
 <p>
 Harga Normal:
-<del>Rp30.000</del>
+<del>Rp30.000 ($30)</del>
 <br>
-<strong>Harga Promo: Rp27.000</strong>
+<strong>Harga Promo: Rp27.000 ($27)</strong>
 </p>
 
 <p>
-Hemat Rp3.000
+Hemat Rp3.000 ($3)
 </p>
 
 </td>
@@ -242,13 +352,13 @@ Nasi Goreng + Ayam Bakar + Mie Goreng
 
 <p>
 Harga Normal:
-<del>Rp63.000</del>
+<del>Rp63.000 ($63)</del>
 <br>
-<strong>Harga Promo: Rp55.000</strong>
+<strong>Harga Promo: Rp55.000 ($55)</strong>
 </p>
 
 <p>
-Hemat Rp8.000
+Hemat Rp8.000 ($8)
 </p>
 
 </td>
@@ -401,7 +511,7 @@ Nasi goreng spesial dengan telur dan sayuran.
 </td>
 
 <td class="harga">
-Rp20.000
+Rp20.000 ($20)
 </td>
 
 </tr>
@@ -427,7 +537,7 @@ Ayam bakar dengan bumbu khas dan sambal.
 </td>
 
 <td class="harga">
-Rp25.000
+Rp25.000 ($25)
 </td>
 
 </tr>
@@ -453,7 +563,7 @@ Mie goreng dengan sayuran dan telur.
 </td>
 
 <td class="harga">
-Rp18.000
+Rp18.000 ($18)
 </td>
 
 </tr>
@@ -479,7 +589,7 @@ Soto ayam hangat dengan kuah gurih.
 </td>
 
 <td class="harga">
-Rp20.000
+Rp20.000 ($20)
 </td>
 
 </tr>
@@ -505,7 +615,7 @@ Es teh manis yang segar.
 </td>
 
 <td class="harga">
-Rp5.000
+Rp5.000 ($5)
 </td>
 
 </tr>
@@ -531,7 +641,7 @@ Brownies cokelat lembut dengan rasa cokelat yang nikmat.
 </td>
 
 <td class="harga">
-Rp15.000
+Rp15.000 ($15)
 </td>
 
 </tr>
@@ -557,7 +667,7 @@ Puding cokelat lembut dengan rasa cokelat yang nikmat.
 </td>
 
 <td class="harga">
-Rp12.000
+Rp12.000 ($12)
 </td>
 
 </tr>
@@ -583,7 +693,7 @@ Es krim lembut dengan berbagai pilihan rasa.
 </td>
 
 <td class="harga">
-Rp10.000
+Rp10.000 ($10)
 </td>
 
 </tr>
