@@ -4,94 +4,716 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Form Pemesanan - Restoran Lezat Nusantara</title>
+
 <style>
-*{box-sizing:border-box}
-body{font-family:Arial,sans-serif;margin:0;background:#fff8ef;color:#333}
-.header{background:#8b4513;color:#fff;text-align:center;padding:30px 20px}
-.header h1{margin:0 0 10px;font-size:32px}.header p{margin:0}
-.container{width:850px;max-width:92%;margin:35px auto}
-.card{background:#fff;border-radius:12px;padding:25px;box-shadow:0 4px 15px rgba(0,0,0,.12)}
-.judul{text-align:center;margin-bottom:25px}.judul h2{color:#8b4513;margin:0 0 8px}.judul p{color:#666}
-table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:15px}
-th{width:30%;text-align:left;background:#f8eadc;color:#6b3410}
-input[type=text],input[type=tel],input[type=date],input[type=number],select{width:100%;padding:11px;border:1px solid #ccc;border-radius:6px;font-size:14px}
-input:focus,select:focus{outline:none;border-color:#8b4513}
-.checkbox{margin:9px 0}.checkbox input{margin-right:8px}
-.payment-box{background:#fffaf5;border:1px solid #ead8c5;border-radius:8px;padding:18px;margin-bottom:15px}
-.payment-title{font-weight:bold;color:#8b4513;font-size:16px}
-.logo-pembayaran{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:15px 0}
-.logo-pembayaran img{width:100px;height:58px;object-fit:contain;padding:5px;background:#fff;border:1px solid #ddd;border-radius:7px}
-.tombol{text-align:center;padding:20px 0 5px}
-button{background:#8b4513;color:#fff;border:0;padding:13px 35px;border-radius:7px;font-size:16px;font-weight:bold;cursor:pointer}
-button:hover{background:#6f350f}
-.kembali{text-align:center;margin-top:20px}.kembali a{color:#8b4513;text-decoration:none;font-weight:bold}
-footer{background:#8b4513;color:#fff;text-align:center;padding:18px;margin-top:40px}
-@media(max-width:600px){.card{padding:15px}th,td{padding:10px;display:block;width:100%}th{border-bottom:0}.logo-pembayaran img{width:85px;height:52px}}
+*{
+    box-sizing:border-box
+}
+
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#fff8ef;
+    color:#333
+}
+
+.header{
+    background:#8b4513;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px
+}
+
+.header h1{
+    margin:0 0 10px;
+    font-size:32px
+}
+
+.header p{
+    margin:0
+}
+
+.container{
+    width:850px;
+    max-width:92%;
+    margin:35px auto
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.12)
+}
+
+.judul{
+    text-align:center;
+    margin-bottom:25px
+}
+
+.judul h2{
+    color:#8b4513;
+    margin:0 0 8px
+}
+
+.judul p{
+    color:#666
+}
+
+table{
+    width:100%;
+    border-collapse:collapse
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:15px
+}
+
+th{
+    width:30%;
+    text-align:left;
+    background:#f8eadc;
+    color:#6b3410
+}
+
+input[type=text],
+input[type=tel],
+input[type=date],
+input[type=number],
+select{
+    width:100%;
+    padding:11px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:14px
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#8b4513
+}
+
+.checkbox{
+    margin:9px 0
+}
+
+.checkbox input{
+    margin-right:8px
+}
+
+.payment-box{
+    background:#fffaf5;
+    border:1px solid #ead8c5;
+    border-radius:8px;
+    padding:18px;
+    margin-bottom:15px
+}
+
+.payment-title{
+    font-weight:bold;
+    color:#8b4513;
+    font-size:16px
+}
+
+.logo-pembayaran{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:15px 0
+}
+
+.logo-pembayaran img{
+    width:100px;
+    height:58px;
+    object-fit:contain;
+    padding:5px;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:7px
+}
+
+.tombol{
+    text-align:center;
+    padding:20px 0 5px
+}
+
+button{
+    background:#8b4513;
+    color:#fff;
+    border:0;
+    padding:13px 35px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer
+}
+
+button:hover{
+    background:#6f350f
+}
+
+.hasil-pesanan{
+    display:none;
+    margin-top:25px;
+    padding:20px;
+    background:#fff8ef;
+    border:2px solid #8b4513;
+    border-radius:10px;
+}
+
+.hasil-pesanan h2{
+    color:#8b4513;
+    text-align:center;
+    margin-top:0
+}
+
+.hasil-pesanan p{
+    margin:10px 0
+}
+
+.kembali{
+    text-align:center;
+    margin-top:20px
+}
+
+.kembali a{
+    color:#8b4513;
+    text-decoration:none;
+    font-weight:bold
+}
+
+footer{
+    background:#8b4513;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    margin-top:40px
+}
+
+@media(max-width:600px){
+
+    .card{
+        padding:15px
+    }
+
+    th,td{
+        padding:10px;
+        display:block;
+        width:100%
+    }
+
+    th{
+        border-bottom:0
+    }
+
+    .logo-pembayaran img{
+        width:85px;
+        height:52px
+    }
+}
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
 <div class="header">
+
 <h1>Restoran Lezat Nusantara</h1>
-<p>Nikmati makanan lezat dengan pelayanan terbaik</p>
+
+<p>
+Nikmati makanan lezat dengan pelayanan terbaik
+</p>
+
 </div>
 
+
+<!-- CONTAINER -->
 <div class="container">
+
 <div class="card">
+
+<!-- JUDUL -->
 <div class="judul">
+
 <h2>Form Pemesanan</h2>
-<p>Silakan isi data berikut untuk melakukan pemesanan di Restoran Lezat Nusantara.</p>
+
+<p>
+Silakan isi data berikut untuk melakukan pemesanan
+di Restoran Lezat Nusantara.
+</p>
+
 </div>
 
-<form action="#" method="post">
+
+<!-- FORM -->
+<form onsubmit="kirimPesanan(event)">
+
 <table>
-<tr><th>Nama Lengkap</th><td><input type="text" name="nama" placeholder="Masukkan nama lengkap" required></td></tr>
-<tr><th>No. HP</th><td><input type="tel" name="no_hp" placeholder="Masukkan nomor HP" required></td></tr>
-<tr><th>Tanggal Booking</th><td><input type="date" name="tanggal_booking" required></td></tr>
-<tr><th>Kategori Menu</th><td>
-<div class="checkbox"><input type="checkbox" name="kategori[]" value="Makanan"> Makanan</div>
-<div class="checkbox"><input type="checkbox" name="kategori[]" value="Minuman"> Minuman</div>
-<div class="checkbox"><input type="checkbox" name="kategori[]" value="Dessert"> Dessert</div>
-</td></tr>
-<tr><th>Jumlah Item</th><td><input type="number" name="jumlah_item" min="1" placeholder="Masukkan jumlah item" required></td></tr>
 
-<tr><th>Pilihan Pembayaran</th><td>
-<div class="payment-box">
-<div><input type="radio" name="pembayaran" value="Kartu Debit/Kredit" required>
-<label class="payment-title">Kartu Debit/Kredit</label></div>
-<div class="logo-pembayaran">
-<img src="assets/visa.svg" alt="Visa">
-<img src="assets/mastercard.svg" alt="Mastercard">
-</div>
-<label>Nomor Kartu (Simulasi)</label><br><br>
-<input type="text" name="nomor_kartu" placeholder="Masukkan nomor kartu">
+
+<!-- NAMA -->
+<tr>
+
+<th>
+Nama Lengkap
+</th>
+
+<td>
+
+<input
+type="text"
+name="nama"
+placeholder="Masukkan nama lengkap"
+required>
+
+</td>
+
+</tr>
+
+
+<!-- NO HP -->
+<tr>
+
+<th>
+No. HP
+</th>
+
+<td>
+
+<input
+type="tel"
+name="no_hp"
+placeholder="Masukkan nomor HP"
+required>
+
+</td>
+
+</tr>
+
+
+<!-- TANGGAL -->
+<tr>
+
+<th>
+Tanggal Booking
+</th>
+
+<td>
+
+<input
+type="date"
+name="tanggal_booking"
+required>
+
+</td>
+
+</tr>
+
+
+<!-- KATEGORI -->
+<tr>
+
+<th>
+Kategori Menu
+</th>
+
+<td>
+
+<div class="checkbox">
+
+<input
+type="checkbox"
+name="kategori[]"
+value="Makanan">
+
+Makanan
+
 </div>
 
-<div class="payment-box">
-<div><input type="radio" name="pembayaran" value="Dompet Digital">
-<label class="payment-title">Dompet Digital</label></div>
-<div class="logo-pembayaran">
-<img src="assets/gopay.svg" alt="GoPay">
-<img src="assets/dana.svg" alt="DANA">
-<img src="assets/ovo.svg" alt="OVO">
+<div class="checkbox">
+
+<input
+type="checkbox"
+name="kategori[]"
+value="Minuman">
+
+Minuman
+
 </div>
-<label>Pilih Dompet Digital</label><br><br>
+
+<div class="checkbox">
+
+<input
+type="checkbox"
+name="kategori[]"
+value="Dessert">
+
+Dessert
+
+</div>
+
+</td>
+
+</tr>
+
+
+<!-- JUMLAH -->
+<tr>
+
+<th>
+Jumlah Item
+</th>
+
+<td>
+
+<input
+type="number"
+name="jumlah_item"
+min="1"
+placeholder="Masukkan jumlah item"
+required>
+
+</td>
+
+</tr>
+
+
+<!-- PEMBAYARAN -->
+<tr>
+
+<th>
+Pilihan Pembayaran
+</th>
+
+<td>
+
+
+<!-- KARTU -->
+<div class="payment-box">
+
+<div>
+
+<input
+type="radio"
+name="pembayaran"
+value="Kartu Debit/Kredit"
+required>
+
+<label class="payment-title">
+Kartu Debit/Kredit
+</label>
+
+</div>
+
+
+<div class="logo-pembayaran">
+
+<img
+src="assets/visa.svg"
+alt="Visa">
+
+<img
+src="assets/mastercard.svg"
+alt="Mastercard">
+
+</div>
+
+
+<label>
+Nomor Kartu (Simulasi)
+</label>
+
+<br>
+<br>
+
+<input
+type="text"
+name="nomor_kartu"
+placeholder="Masukkan nomor kartu">
+
+</div>
+
+
+<!-- DOMPET DIGITAL -->
+<div class="payment-box">
+
+<div>
+
+<input
+type="radio"
+name="pembayaran"
+value="Dompet Digital">
+
+<label class="payment-title">
+Dompet Digital
+</label>
+
+</div>
+
+
+<div class="logo-pembayaran">
+
+<img
+src="assets/gopay.svg"
+alt="GoPay">
+
+<img
+src="assets/dana.svg"
+alt="DANA">
+
+<img
+src="assets/ovo.svg"
+alt="OVO">
+
+</div>
+
+
+<label>
+Pilih Dompet Digital
+</label>
+
+<br>
+<br>
+
 <select name="dompet_digital">
-<option value="">-- Pilih Dompet Digital --</option>
-<option value="GoPay">GoPay</option>
-<option value="DANA">DANA</option>
-<option value="OVO">OVO</option>
-</select>
-</div>
-</td></tr>
 
-<tr><td colspan="2"><div class="tombol"><button type="submit">Kirim Pesanan</button></div></td></tr>
+<option value="">
+-- Pilih Dompet Digital --
+</option>
+
+<option value="GoPay">
+GoPay
+</option>
+
+<option value="DANA">
+DANA
+</option>
+
+<option value="OVO">
+OVO
+</option>
+
+</select>
+
+</div>
+
+</td>
+
+</tr>
+
+
+<!-- TOMBOL -->
+<tr>
+
+<td colspan="2">
+
+<div class="tombol">
+
+<button type="submit">
+Kirim Pesanan
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
 </table>
+
 </form>
 
-<div class="kembali"><a href="index.html">← Kembali ke Halaman Restoran</a></div>
-</div>
+
+<!-- HASIL PESANAN -->
+<div
+id="hasilPesanan"
+class="hasil-pesanan">
 </div>
 
-<footer>&copy; 2026 Restoran Lezat Nusantara</footer>
+
+<!-- KEMBALI -->
+<div class="kembali">
+
+<a href="index.html">
+← Kembali ke Halaman Restoran
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+&copy; 2026 Restoran Lezat Nusantara
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+function kirimPesanan(event){
+
+    event.preventDefault();
+
+
+    const form = document.querySelector("form");
+
+
+    // Mengambil data
+    const nama =
+        form.elements["nama"].value;
+
+    const noHp =
+        form.elements["no_hp"].value;
+
+    const tanggal =
+        form.elements["tanggal_booking"].value;
+
+    const jumlah =
+        form.elements["jumlah_item"].value;
+
+
+    // Mengambil kategori
+    const kategori = [];
+
+    document
+    .querySelectorAll('input[name="kategori[]"]:checked')
+    .forEach(function(item){
+
+        kategori.push(item.value);
+
+    });
+
+
+    // Mengambil pembayaran
+    const pembayaran =
+        document.querySelector(
+            'input[name="pembayaran"]:checked'
+        );
+
+
+    const metodePembayaran =
+        pembayaran
+        ? pembayaran.value
+        : "-";
+
+
+    // Mengambil dompet digital
+    const dompet =
+        form.elements["dompet_digital"].value;
+
+
+    let detailPembayaran =
+        metodePembayaran;
+
+
+    if(
+        metodePembayaran === "Dompet Digital"
+        &&
+        dompet !== ""
+    ){
+
+        detailPembayaran =
+            "Dompet Digital - " + dompet;
+
+    }
+
+
+    if(
+        metodePembayaran === "Kartu Debit/Kredit"
+    ){
+
+        detailPembayaran =
+            "Kartu Debit/Kredit";
+
+    }
+
+
+    // Menampilkan hasil
+    document.getElementById("hasilPesanan").innerHTML = `
+
+        <h2>
+        Pesanan Berhasil Dikirim! 🎉
+        </h2>
+
+        <p>
+        <strong>Nama Lengkap:</strong>
+        ${nama}
+        </p>
+
+        <p>
+        <strong>No. HP:</strong>
+        ${noHp}
+        </p>
+
+        <p>
+        <strong>Tanggal Booking:</strong>
+        ${tanggal}
+        </p>
+
+        <p>
+        <strong>Kategori Menu:</strong>
+        ${kategori.length > 0 ? kategori.join(", ") : "-"}
+        </p>
+
+        <p>
+        <strong>Jumlah Item:</strong>
+        ${jumlah}
+        </p>
+
+        <p>
+        <strong>Pembayaran:</strong>
+        ${detailPembayaran}
+        </p>
+
+        <hr>
+
+        <p>
+        Terima kasih telah melakukan pemesanan
+        di <strong>Restoran Lezat Nusantara</strong>.
+        </p>
+
+        <p>
+        Pesanan kamu sedang diproses.
+        </p>
+
+    `;
+
+
+    // Menampilkan kotak hasil
+    document.getElementById(
+        "hasilPesanan"
+    ).style.display = "block";
+
+
+    // Scroll ke hasil pesanan
+    window.scrollTo({
+
+        top:
+        document.getElementById(
+            "hasilPesanan"
+        ).offsetTop - 30,
+
+        behavior:"smooth"
+
+    });
+
+
+    // Mengosongkan form
+    form.reset();
+
+}
+
+</script>
+
 </body>
 </html>
